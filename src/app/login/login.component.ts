@@ -50,7 +50,12 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true;
-    this.authenticationService.login(this.f.email.value, this.f.password.value)
+
+    let userParams = new URLSearchParams();
+    Object.keys(this.loginForm.controls).forEach(key => userParams.append(key, this.loginForm.value[key]));
+    console.log(userParams.toString());
+    
+    this.authenticationService.login(`"${userParams.toString()}"`)
         .pipe(first())
         .subscribe(
           data => {

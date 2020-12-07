@@ -49,7 +49,16 @@ export class SignUpComponent implements OnInit {
         }
 
         this.loading = true;
-        this.userService.signUp(this.signUpForm.value)
+        console.log(this.signUpForm.value.firstName);
+        let userParams = new URLSearchParams();
+        // userParams.append("firstName",this.signUpForm.value);
+        // userParams.append("lastName",this.signUpForm.value);
+        // userParams.append("email",this.signUpForm.value);
+        // userParams.append("password",this.signUpForm.value);
+
+        Object.keys(this.signUpForm.controls).forEach(key => userParams.append(key, this.signUpForm.value[key]));
+        console.log(userParams.toString());
+        this.userService.signUp(`"${userParams.toString()}"`)
             .pipe(first())
             .subscribe(
                 data => {

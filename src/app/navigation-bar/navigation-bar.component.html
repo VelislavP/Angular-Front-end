@@ -1,13 +1,18 @@
+<script src="animation.js"></script> 
 <nav>
-    <ul class="nav-bar"> 
-        <li class="logo"><a href="/" class="logoHome"></a></li>
+    <ul><li><a href="/" class="logoHome"></a></li></ul>
+    <ul class="nav-bar">        
         <li class="item"><a routerLink="/">Home</a></li>
         <li class="item"><a href="#">Categories</a></li>
         <li class="item"><a href="#">My Album</a></li>   
+        <li class="logout hidden"><a (click)="logout()">Log Out</a></li>
     </ul>
-</nav>
-<nav>
     <ul>
-        <li class="item"><a (click)="logout()">Logout</a></li>
+        <li class="logout"><a (click)="logout()">Log Out</a></li>
     </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>    
 </nav>

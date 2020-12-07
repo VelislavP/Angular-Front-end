@@ -11,7 +11,7 @@ export class AuthenticationService {
     public currentUser: Observable<User>;
     public static loggedInUser: User;
     public readonly rootURL = 'https://localhost:44377';
-    private baseUrl = 'https://localhost:44377' + '/login';
+    private loginUrl = 'https://localhost:44377/login';
     
     constructor(private http: HttpClient) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
@@ -22,16 +22,13 @@ export class AuthenticationService {
         return this.currentUserSubject.value;
     }
 
-    login(email: string, password: string) {
+    login(user: string) {
         const header = new HttpHeaders()
         .set('Content-type', 'application/json');
-        let loginJson = {
-            email: email,
-            password: password
-        };
-        const body = JSON.stringify(loginJson);
+        const body = user;
+        console.log(user);
         //gives 400 Ok 
-        return this.http.post<User>(this.baseUrl, body, { headers: header} )
+        return this.http.post<any>(this.loginUrl, body, { headers: header} )
             .pipe(map(user => {
                 if (user && user.token) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
