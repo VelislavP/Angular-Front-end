@@ -1,0 +1,53 @@
+
+*{
+    box-sizing: border-box !important;
+}
+
+#wrapper{
+    background-color: #cccc33;
+}
+
+#centered{
+    max-width: 700px;
+}
+
+button{
+    line-height: normal;
+    width: 100%;
+    max-width: 350px;
+}
+
+input {
+    font-weight: 400;
+    box-shadow: 1.5pt 1.5pt 5pt rgba(0,0,0,.5);
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    outline: none;
+    height: 48px;
+    position: relative;
+}
+input:hover{
+    border-color: black;
+}
+input:focus{
+    border-color: black;
+}
+
+span{
+    position: absolute;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+  
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    margin: 5pt;
+}
