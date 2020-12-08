@@ -8,7 +8,7 @@
 }
 
 body{
-    margin: 0px !important;
+    margin: 0px;
     background-color: white;
 }
 
@@ -96,4 +96,25 @@ button{
     border-style: none;
 }
 
-
+.loader {
+    border: 4px solid #f3f3f300;
+    border-radius: 50%;
+    border-top: 4px solid #cccc33;
+    border-bottom: 4px solid#cccc33;
+    border-left: 4px solid #cccc33;
+    width: 18px;
+    height: 18px;
+    margin-left: -20px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

@@ -32,3 +32,8 @@ span{
     margin-top: 10pt;
     margin-bottom: 5pt;
 }
+.loader{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+}

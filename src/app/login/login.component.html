@@ -18,13 +18,13 @@
                 </div>
             </div>
             <button [disabled]="loading" class="login-btn">
-                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                <span *ngIf="loading" class="loader"></span>
                 Log In
             </button>
             <div>
                 <button routerLink="/signup" class="signup-btn">Sign Up</button>
             </div>
-            <div *ngIf="error" class="error">{{error}}</div>
+            <div *ngIf="error" class="error">The login info you entered doesn't belong to an account. Please check your info and try again.</div>
         </form>
 
     </div>

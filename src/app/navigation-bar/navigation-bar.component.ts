@@ -10,17 +10,23 @@ import { AuthenticationService } from '@app/_services';
 })
 export class NavigationBarComponent {
   currentUser: User;
-
+  menuOpen: boolean;
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService
   ){
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);  
+    this.menuOpen = false;
   }
 
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
   }
+
+  nav_slide() {
+      document.getElementsByClassName('nav-bar')[0].classList.toggle('nav_active');
+      document.getElementsByClassName('burger')[0].classList.toggle('open');
+}
 
 }

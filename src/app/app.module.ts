@@ -9,6 +9,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './_helpers';
 import { SignUpComponent } from './signUp/signUp.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { AlbumComponent } from './album/album.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
     HomeComponent,
     LoginComponent,
     SignUpComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    AlbumComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

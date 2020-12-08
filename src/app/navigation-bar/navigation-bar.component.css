@@ -8,6 +8,7 @@ ul{
     margin: 0;
     list-style-type: none;
     padding: 10pt;
+    align-items: center;
 }
 ul:nth-child(1){
     padding:0;
@@ -48,8 +49,7 @@ a:hover {
     text-align: left;
 }
 
-
-.hidden a{
+.hidden{
     display: none;
 }
 .burger .line1, .line2, .line3
@@ -79,6 +79,7 @@ a:hover {
     }
     .hidden a{
         display: block;
+        position: relative;
     }
     .nav-bar{
         position: absolute;
@@ -86,12 +87,11 @@ a:hover {
         height: 70vh;
         top: 8vh;
         background-color: black;
-        border-radius: 12px 0px 0px 12px;
         padding-top: 1%;
         padding-bottom: 1%;
         flex-direction: column;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
         width: 50%; 
@@ -106,10 +106,8 @@ a:hover {
         margin-top: 5%;
         margin-bottom: 5%;
         align-items: center;
-        opacity: 0%;
     }
     .nav-bar a{
-        color: #e9eaea;
         align-items: center;
         text-shadow: 2px 2px 4px #6b6b6b;
     }
@@ -140,15 +138,15 @@ a:hover {
     }
 }
 .open .line2 {
-    background-color: #0c73ee;
+    background-color: #cccc00;
     transform: translateX(50px);
     opacity: 0;
   }
 .open .line1 {
-    background-color: #0c73ee;
+    background-color: #cccc00;
     transform: rotate(45deg) translateY(12.5px);
   }
 .open .line3 {
-    background-color: #0c73ee;
+    background-color: #cccc00;
     transform: rotate(-45deg) translateY(-12.5px);
   }
