@@ -7,3 +7,42 @@
     align-content: center;
     vertical-align: middle; */
 }
+.add-btn{
+    position:fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 2rem;
+    border-radius: 50%;
+    background-color: black;
+    color: #cccc33;
+    text-decoration: none;
+}
+
+.bar{
+    position:fixed;
+    width:100%;
+    background-color: black;
+    height: 4%;
+    bottom:0;
+    display:none;
+}
+
+@media (max-width: 948px){
+    .add-btn{
+        display:none;
+    }
+    .add-phone{
+        bottom: 2rem;
+        right: 2rem;
+        padding: 2rem;
+        border-radius: 50%;
+        background-color: black;
+        color: #cccc33;
+        text-decoration: none;
+        margin: auto;
+    }
+    .bar{
+        display: block;
+        text-align: center;
+    }
+}

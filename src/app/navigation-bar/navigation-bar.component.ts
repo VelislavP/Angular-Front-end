@@ -17,6 +17,16 @@ export class NavigationBarComponent {
   ){
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);  
     this.menuOpen = false;
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+    }
   }
 
   logout() {
@@ -27,6 +37,7 @@ export class NavigationBarComponent {
   nav_slide() {
       document.getElementsByClassName('nav-bar')[0].classList.toggle('nav_active');
       document.getElementsByClassName('burger')[0].classList.toggle('open');
-}
+  }
+     
 
 }

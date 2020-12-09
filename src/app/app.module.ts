@@ -11,6 +11,7 @@ import { SignUpComponent } from './signUp/signUp.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { AlbumComponent } from './album/album.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CategoriesComponent } from './categories/categories.component';
     SignUpComponent,
     NavigationBarComponent,
     AlbumComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

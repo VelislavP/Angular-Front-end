@@ -1,14 +1,15 @@
 
-<nav>
+<nav id="navbar">
     <ul><li><a href="/" class="logoHome"></a></li></ul>
     <ul class="nav-bar">        
         <li class="item"><a routerLink="/">Home</a></li>
         <li class="item"><a href="/categories">Categories</a></li>
         <li class="item"><a href="/album">My Album</a></li>   
-        <li class="logout hidden"><a (click)="logout()">Log Out</a></li>
+        <li class="item"><a href="/post">Post</a></li>  
+        <li class="logout hidden item"><a (click)="logout()">Log Out</a></li>
     </ul>
     <ul>
-        <li class="logout"><a (click)="logout()">Log Out</a></li>
+        <li class="logout item"><a (click)="logout()">Log Out</a></li>
     </ul>
     <div class="burger" (click)="nav_slide()">
         <div class="line1"></div>
