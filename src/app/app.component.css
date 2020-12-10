@@ -11,12 +11,40 @@
     position:fixed;
     bottom: 2rem;
     right: 2rem;
-    padding: 2rem;
-    border-radius: 50%;
+    padding: 3rem;
+    border-radius: 12%;
     background-color: black;
     color: #cccc33;
     text-decoration: none;
 }
+.circle {
+    border-radius: 50%;
+    background-color: black;
+  }
+  .circle::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #cccc33;
+    height: 10px;
+    margin-top: -5px;
+    top: 50%;
+    left: 25%;
+    right: 25%;
+    z-index: 9;
+  }
+  .circle::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #cccc33;
+    width: 10px;
+    margin-left: -5px;
+    left: 50%;
+    top: 25%;
+    bottom: 25%;
+    z-index: 9;
+  }
 
 .bar{
     position:fixed;
@@ -29,13 +57,13 @@
 
 @media (max-width: 948px){
     .add-btn{
-        display:none;
+        padding: 2rem;
     }
     .add-phone{
         bottom: 2rem;
         right: 2rem;
         padding: 2rem;
-        border-radius: 50%;
+        border-radius: 12%;
         background-color: black;
         color: #cccc33;
         text-decoration: none;

@@ -1,7 +1,45 @@
 .home-info{
-    position: absolute;
-    color: blue;
+    display: flex;
 }
-h4{
-    color: blue;
-} 
+/* post styles */
+.post{
+    border: 2.2pt solid black;
+    margin: 20pt 0 20pt 0;
+
+}
+.post h1, article, span{
+    font-family: 'Teko', sans-serif;
+    font-size: 130%;
+    font-weight: 400;
+}
+.counter{
+    font-size: 103%;
+}
+.post .tag{
+    font-size: 103%;
+    background-color: #cccc33bd;
+    margin: 1pt;
+    padding: 0 10pt 0 10pt;
+    border-radius: 12%;
+}
+.post h1{
+    margin:0;
+    text-align: center;
+}
+
+.post img{
+    margin: 0;
+}
+
+.post .user{
+    display: flex;
+    margin: 5pt;
+}
+
+.like-box{
+    display: flex;
+    align-items: center;
+}
+.categories{
+    margin: 5pt;
+}

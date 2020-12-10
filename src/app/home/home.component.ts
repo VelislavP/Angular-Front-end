@@ -3,7 +3,11 @@ import { first } from 'rxjs/operators';
 import { User } from '../_models';
 import { UserService} from '../_services';
 
-@Component({ templateUrl: 'home.component.html' })
+@Component({
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css']
+  })
 export class HomeComponent {
     loading = false;
     user: User;
@@ -17,13 +21,7 @@ export class HomeComponent {
             this.user = user;
         });
     }
-}
-@Component({ templateUrl: 'home.component.html' })
-export class AppComponent implements AfterViewInit {
-    constructor(private elementRef: ElementRef){
-
+    like() {
+        document.getElementsByClassName('like')[0].classList.toggle('like-active');
     }
-    ngAfterViewInit(){
-      this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'white';
-   }
 }
