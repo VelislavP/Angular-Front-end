@@ -12,8 +12,14 @@
     font-size: 130%;
     font-weight: 400;
 }
-.counter{
+.counter,.time{
     font-size: 103%;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+}
+.time{
+    padding: 5pt;
+    color:rgba(0, 0, 0, 0.527);
 }
 .post .tag{
     font-size: 103%;

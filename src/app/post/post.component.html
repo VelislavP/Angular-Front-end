@@ -1,7 +1,30 @@
 <div class="center_feed">
     <div class="feed_container">
         <div class="feed">
-          <p>Post works!</p>
+            <form [formGroup]="postForm" (ngSubmit)="onSubmit()" class="postForm">
+                <div class="entry">
+                    <label for="url">URL:</label>
+                    <input type="text" formControlName="url" placeholder="Enter URL address of your picture">
+                </div>
+                <div class="entry">
+                    <label for="categories" class="categories">Categories:</label>
+                    <input type="text" formControlName="categories" placeholder="Choose categories">
+                </div>
+                <button [disabled]="loading" class="signup-btn post-btn">
+                    <span *ngIf="loading" class="loader"></span>
+                    Post
+                </button>
+            </form>   
+            <div class="row">  
+                <div class="column">
+                    <div class="post"> 
+                        <img src="https://static.posters.cz/image/750/image/750/glass-art/lake-pier-100x75-cm-i57013.jpg" style="width:100%">
+                        <div class="categories">
+                            <span class="tag">nature</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>    
 </div> 

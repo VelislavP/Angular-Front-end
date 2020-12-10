@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap');
 *{
     font-family: 'Roboto', sans-serif;
     font-size: 103%;
@@ -99,7 +98,24 @@ button{
     background-color: rgb(26, 26, 26);
     border-style: none;
 }
-
+/* Input */
+input {
+    font-weight: 400;
+    box-shadow: 1.5pt 1.5pt 5pt rgba(0,0,0,.5);
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    outline: none;
+    height: 48px;
+    width: 100%;
+    position: relative;
+}
+input:hover{
+    border-color: black;
+}
+input:focus{
+    border-color: black;
+}
 /* Like */
 
 .like{

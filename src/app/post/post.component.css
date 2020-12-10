@@ -1,0 +1,85 @@
+input {
+    font-weight: 400;
+    box-shadow: 1.5pt 1.5pt 5pt rgba(0,0,0,.5);
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    outline: none;
+    height: 48px;
+    width: 100%;
+    position: relative;
+}
+input:hover{
+    border-color: black;
+}
+input:focus{
+    border-color: black;
+}
+/* .post{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+} */
+.entry{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:5pt;
+}
+.entry label,input{
+    padding-right: 5pt;
+    font-size: 130%;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+}
+.categories{
+    white-space: pre;
+}
+/* post preview */
+.post{
+    margin: 5pt 0 5pt 0;
+    max-width: 64%;
+    max-height: 64%;
+}
+.post h1, article, span{
+    font-family: 'Teko', sans-serif;
+    font-size: 130%;
+    font-weight: 400;
+}
+.counter,.time{
+    font-size: 103%;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+}
+.time{
+    padding: 5pt;
+    color:rgba(0, 0, 0, 0.527);
+}
+.post .tag{
+    font-size: 103%;
+    background-color: #cccc33bd;
+    margin:2.5pt;
+    padding: 0 10pt 0 10pt;
+    border-radius: 12%;
+    box-shadow: 1.5pt 1.5pt 5pt rgba(0,0,0,.5);
+}
+.post h1{
+    margin:0;
+    text-align: center;
+}
+
+.post img{
+    margin-top: -64px;
+    box-shadow: 1.5pt 1.5pt 5pt rgba(0,0,0,.5);
+}
+.categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -2.5pt;
+}
+
+.post-btn{
+    width: 33%;
+    margin-left: 66%;
+}
